@@ -17,7 +17,7 @@ class CommentModel {
   factory CommentModel.fromJson(Map<String, dynamic> json) =>
       _$CommentModelFromJson(json);
 
-  Comment get fromModel {
+  Comment get toEntity {
     return Comment(id, email, body);
   }
 }

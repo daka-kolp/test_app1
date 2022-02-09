@@ -15,12 +15,12 @@ class PostRepoImpl extends PostRepo {
   @override
   Future<List<Post>> getPosts() async {
     final response = await _client.get('$_base/posts');
-    return response.data.map<Post>((e) => PostModel.fromJson(e).fromModel).toList();
+    return response.data.map<Post>((e) => PostModel.fromJson(e).toEntity).toList();
   }
 
   @override
   Future<List<Comment>> getComments(int postId) async {
     final response = await _client.get('$_base/comments?postId=$postId');
-    return response.data.map<Comment>((e) => CommentModel.fromJson(e).fromModel).toList();
+    return response.data.map<Comment>((e) => CommentModel.fromJson(e).toEntity).toList();
   }
 }

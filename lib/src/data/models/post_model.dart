@@ -15,7 +15,7 @@ class PostModel {
   factory PostModel.fromJson(Map<String, dynamic> json) =>
       _$PostModelFromJson(json);
 
-  Post get fromModel {
+  Post get toEntity {
     return Post(id, userId, title, body);
   }
 }
