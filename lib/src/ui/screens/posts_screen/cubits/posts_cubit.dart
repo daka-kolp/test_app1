@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -27,6 +25,7 @@ class PostsCubit extends Cubit<PostsState> {
 }
 
 abstract class PostsState extends Equatable {
+  @override
   List<Object> get props => [];
 }
 
@@ -39,6 +38,7 @@ class PostsFetched extends PostsState {
 
   PostsFetched(this.posts);
 
+  @override
   List<Object> get props => [posts];
 }
 
@@ -51,5 +51,6 @@ class PostsLoadFailure extends PostsState {
 
   PostsLoadFailure(this.error);
 
+  @override
   List<Object> get props => [error];
 }

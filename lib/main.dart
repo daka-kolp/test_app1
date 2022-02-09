@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:test_app1/src/data/repositories/post_repo_impl.dart';
 import 'package:test_app1/src/domain/repositories/post_repo.dart';
-import 'package:test_app1/src/ui/screens/post_screen/cubits/comments_cubit.dart';
 import 'package:test_app1/src/ui/screens/posts_screen/cubits/posts_cubit.dart';
 import 'package:test_app1/src/ui/screens/posts_screen/posts_screen.dart';
 
